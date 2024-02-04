@@ -1,0 +1,23 @@
+@import '../../global.scss';
+
+.ct-ul {
+    max-width: $lg;
+    margin: $space-small auto;
+
+    li {
+        display: inline;
+        font-size: 14px;
+        color: $dark-gray;
+        font-weight: 700;
+
+        &::after {
+            content: ', ';
+        }
+
+        &:last-child {
+            &::after {
+                content: '.';
+            }
+        }
+    }
+}

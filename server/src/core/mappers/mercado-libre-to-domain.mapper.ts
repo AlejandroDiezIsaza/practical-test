@@ -13,7 +13,6 @@ export const itemAndDescriptionToReponseItemDetail = ([itemResult, description]:
     item: {
       ...resultToItem(itemResult),
       picture: itemResult.pictures.at(0)?.url,
-      sold_quantity: 0,
       description: description.plain_text
     }
   } as ResponseItemDetail;

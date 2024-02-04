@@ -1,0 +1,67 @@
+@import '../../global.scss';
+
+.detail {
+    display: flex;
+    width: calc(100% - $space-small);
+    padding: $space-small 0 $space-small $space-small;
+
+    .detail-data-picture {
+        width: calc(70% - $space-small);
+
+        img {
+            width: 680px;
+        }
+
+        .detail-description {
+            padding-left: $space-small;
+            padding-top: $space-big;
+
+            .detail-description-title {
+                margin-bottom: $space-big;
+                font-size: 28px;
+                font-weight: 300;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 300;
+                padding-bottom: $space-small;
+            }
+        }
+    }
+
+    .detail-data-info {
+        width: calc(30% - $space-small);
+        padding-top: $space-small;
+        
+        .detail-data-info-condition {
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+        .detail-data-info-title {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: $space-small;
+        }
+
+        .detail-data-info-price {
+            font-size: 46px;
+            font-weight: 300;
+            word-wrap: break-word;
+            margin: $space-big 0;
+        }
+
+        .detail-data-info-buy {
+            margin-bottom: $space-big;
+            border: none;
+            background-color: $blue-button;
+            color: $light;
+            text-align: center;
+            width: 170px;
+            height: 35px;
+            border-radius: $radius;
+            cursor: pointer;
+        }
+    }
+}

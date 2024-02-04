@@ -6,22 +6,22 @@ import { responseToResponseSearchItem, itemAndDescriptionToReponseItemDetail } f
 import { getSearchItemsByQuery, getItemById, getItemDescriptionById } from '../../infrastructure/services';
 
 export const itemController = (app: express.Application) => {
-  const BASE_ITEM = `${APP_URL_BASE}/item`;
+  const BASE_ITEM = `${APP_URL_BASE}`;
 
-  app.get(`${BASE_ITEM}/search`, searchItemsByName);
-  app.get(`${BASE_ITEM}/detail`, detailItemById);
+  app.get(`${BASE_ITEM}/items`, searchItemsByQuery);
+  app.get(`${BASE_ITEM}/items/:id`, detailItemById);
 };
 
-const searchItemsByName = (req: express.Request, res: express.Response): void => {
-  const name = (req.query['name'] || '') as string;
-  getSearchItemsByQuery(name)
+const searchItemsByQuery = (req: express.Request, res: express.Response): void => {
+  const query = (req.query['q'] || '') as string;
+  getSearchItemsByQuery(query)
     .then(responseToResponseSearchItem)
     .then((value: ResponseSearchItem) => res.json(value))
     .catch((error: Error) => controlledError(error, res));
 };
 
 const detailItemById = (req: express.Request, res: express.Response): void => {
-  const id = (req.query['id'] || '') as string;
+  const id = req.params.id;
   Promise.all([
     getItemById(id),
     getItemDescriptionById(id)

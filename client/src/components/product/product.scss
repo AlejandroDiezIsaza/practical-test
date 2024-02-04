@@ -1,0 +1,49 @@
+@import '../../global.scss';
+
+.product {
+    display: flex;
+    width: 100%;
+    padding: $space-small 0;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.7;
+    }
+    
+    .product-image {
+        margin: 0 $space-small;
+
+        img {
+            width: 180px;
+            height: 180px;
+            border-radius: $radius;
+        }
+    }
+
+    .product-info {
+        width: 50%;
+
+        .product-info-price {
+            font-size: 24px;
+            font-weight: 300;
+            margin-bottom: $space-big;
+
+            img {
+                margin-left: 10px;
+            }
+        }
+
+        .product-info-title {
+            font-size: 18px;
+            font-weight: 300;
+        }
+    }
+}
+
+hr {
+    width: calc(100% - 42px);
+    height: 1px;
+    margin: 0 auto;
+    border: none;
+    background-color: $light-gray;
+}

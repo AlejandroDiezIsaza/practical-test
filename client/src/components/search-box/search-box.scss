@@ -1,0 +1,43 @@
+@import '../../global.scss';
+
+header {
+    background-color: $primary;
+
+    .sb-content {
+        display: flex;
+        padding: 5px 0;
+        background-color: $primary;
+
+        .sb-logo {
+            cursor: pointer;
+        }
+
+        .sb-input-search {
+            display: flex;
+            width: 100%;
+            margin-left: 20px;
+
+            input {
+                width: 100%;
+                height: 36px;
+                border: 0;
+                font-size: 18px;
+                padding: 0 10px;
+                color: $medium-gray;
+                outline: none;
+                border-radius: $radius 0 0 $radius;
+            }
+
+            .sb-button-search {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 36px;
+                height: 36px;
+                border-radius: 0 $radius $radius 0;
+                background-color: $light-gray;
+                cursor: pointer;
+            }
+        }
+    }
+}
