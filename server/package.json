@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "rimraf dist && rimraf bundle && tsc && node ./dist/app.js",
-    "build": "rimraf dist && rimraf bundle && tsc --project tsconfig.prod.json && webpack && rimraf dist"
+    "build": "rimraf dist && rimraf bundle && tsc --project tsconfig.prod.json && webpack && rimraf dist",
+    "test": "jest"
   },
   "author": "ADI",
   "dependencies": {
@@ -14,7 +15,13 @@
   "devDependencies": {
     "@types/cors": "2.8.17",
     "@types/express": "4.17.21",
+    "@types/jest": "^29.5.12",
+    "@types/supertest": "^6.0.2",
+    "jest": "^29.7.0",
     "rimraf": "5.0.5",
+    "supertest": "^6.3.4",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
     "typescript": "5.3.3",
     "webpack": "5.90.1",
     "webpack-cli": "5.1.4"

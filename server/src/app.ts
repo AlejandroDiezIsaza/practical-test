@@ -14,3 +14,5 @@ registerRoutes(app);
 app.listen(APP_PORT, () =>
   console.log(`Application running on the port: ${APP_PORT} - ${APP_URL_BASE}`)
 );
+
+export default app;
